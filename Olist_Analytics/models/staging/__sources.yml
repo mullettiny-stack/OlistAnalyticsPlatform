@@ -1,0 +1,34 @@
+version: 2
+
+sources:
+  - name: ecom
+    schema: raw
+    description: Olist Brazilian e-commerce data
+
+    tables:
+      - name: olist_customer_dataset
+        description: One record per customer
+
+      - name: olist_orders_dataset
+        description: One record per order
+
+      - name: olist_order_items_dataset
+        description: One record per item purchased in an order
+
+      - name: olist_products_dataset
+        description: One record per product
+
+      - name: olist_sellers_dataset
+        description: One record per seller
+
+      - name: olist_order_payments_dataset
+        description: Payment information for orders
+
+      - name: olist_order_reviews_dataset
+        description: Customer reviews associated with orders
+
+      - name: olist_geolocation_dataset
+        description: Brazilian geolocation information
+
+      - name: product_category_name_translation
+        description: Portuguese-to-English product category translations

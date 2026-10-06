@@ -1,0 +1,43 @@
+models:
+  - name: stg_orders
+    description: Customer orders with order status and delivery timeline information.
+
+    columns:
+      - name: order_id
+        description: Unique identifier for the order.
+        data_tests:
+          - not_null
+          - unique
+
+      - name: customer_id
+        description: The customer associated with the order.
+        data_tests:
+          - not_null
+          - relationships:
+              arguments:
+                to: ref('stg_customers')
+                field: customer_id
+
+      - name: order_status
+        description: Current status of the order.
+        data_tests:
+          - not_null
+
+      - name: order_purchase_timestamp
+        description: Timestamp when the customer placed the order.
+        data_tests:
+          - not_null
+
+      - name: order_approved_at
+        description: Timestamp when the order payment was approved.
+
+      - name: order_delivered_carrier_date
+        description: Date when the order was handed over to the carrier.
+
+      - name: order_delivered_customer_date
+        description: Date when the order was delivered to the customer.
+
+      - name: order_estimated_delivery_date
+        description: Estimated delivery date provided to the customer.
+        data_tests:
+          - not_null

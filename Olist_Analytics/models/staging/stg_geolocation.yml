@@ -1,0 +1,28 @@
+models:
+  - name: stg_geolocation
+    description: Data about Brazilian geolocation information.
+    columns:
+      - name: geolocation_zip_code_prefix
+        description: The ZIP code prefix associated with the geographic location.
+        data_tests:
+          - not_null
+
+      - name: geolocation_lat
+        description: Latitude of the geographic location.
+        data_tests:
+          - not_null
+
+      - name: geolocation_lng
+        description: Longitude of the geographic location.
+        data_tests:
+          - not_null
+
+      - name: geolocation_city
+        description: City associated with the geographic location.
+        data_tests:
+          - not_null
+
+      - name: geolocation_state
+        description: Brazilian state associated with the geographic location.
+        data_tests:
+          - not_null

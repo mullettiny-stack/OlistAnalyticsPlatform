@@ -1,0 +1,34 @@
+models:
+  - name: stg_products
+    description: Product information from the Olist e-commerce dataset.
+
+    columns:
+      - name: product_id
+        description: Unique identifier for the product.
+        data_tests:
+          - not_null
+          - unique
+
+      - name: product_category_name
+        description: Product category name in Portuguese.
+
+      - name: product_name_lenght
+        description: Number of characters in the product name.
+
+      - name: product_description_lenght
+        description: Number of characters in the product description.
+
+      - name: product_photos_qty
+        description: Number of photos associated with the product.
+
+      - name: product_weight_g
+        description: Product weight in grams.
+
+      - name: product_length_cm
+        description: Product length in centimeters.
+
+      - name: product_height_cm
+        description: Product height in centimeters.
+
+      - name: product_width_cm
+        description: Product width in centimeters.

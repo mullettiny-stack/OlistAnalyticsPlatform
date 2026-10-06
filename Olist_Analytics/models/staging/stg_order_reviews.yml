@@ -1,0 +1,39 @@
+models:
+  - name: stg_order_reviews
+    description: Customer reviews and ratings associated with orders.
+
+    columns:
+      - name: review_id
+        description: Unique identifier for the review.
+        data_tests:
+          - not_null
+
+      - name: order_id
+        description: The order associated with the review.
+        data_tests:
+          - not_null
+          - relationships:
+              arguments:
+                to: ref('stg_orders')
+                field: order_id
+
+      - name: review_score
+        description: Customer rating for the order, from 1 to 5.
+        data_tests:
+          - not_null
+
+      - name: review_comment_title
+        description: Title of the customer's review.
+
+      - name: review_comment_message
+        description: Written message provided by the customer.
+
+      - name: review_creation_date
+        description: Date when the review was created.
+        data_tests:
+          - not_null
+
+      - name: review_answer_timestamp
+        description: Timestamp when the review was answered.
+        data_tests:
+          - not_null

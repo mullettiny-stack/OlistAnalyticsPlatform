@@ -1,0 +1,15 @@
+models:
+  - name: stg_product_category_name_translation
+    description: Translation of Olist product category names from Portuguese to English.
+
+    columns:
+      - name: product_category_name
+        description: Original product category name in Portuguese.
+        data_tests:
+          - not_null
+          - unique
+
+      - name: product_category_name_english
+        description: Product category name translated into English.
+        data_tests:
+          - not_null

@@ -1,0 +1,21 @@
+version: 2
+
+models:
+  - name: customer_locations
+    description: Customer distribution by city and state.
+
+    columns:
+      - name: customer_city
+        description: City where the customer is located.
+        data_tests:
+          - not_null
+
+      - name: customer_state
+        description: Brazilian state where the customer is located.
+        data_tests:
+          - not_null
+
+      - name: customer_count
+        description: Number of customers in each city.
+        data_tests:
+          - not_null

@@ -1,0 +1,33 @@
+models:
+  - name: stg_order_payments
+    description: Payment information associated with customer orders.
+
+    columns:
+      - name: order_id
+        description: The order associated with the payment.
+        data_tests:
+          - not_null
+          - relationships:
+              arguments:
+                to: ref('stg_orders')
+                field: order_id
+
+      - name: payment_sequential
+        description: Sequential identifier for payments associated with an order.
+        data_tests:
+          - not_null
+
+      - name: payment_type
+        description: The payment method used for the order.
+        data_tests:
+          - not_null
+
+      - name: payment_installments
+        description: Number of installments used for the payment.
+        data_tests:
+          - not_null
+
+      - name: payment_value
+        description: Monetary value of the payment.
+        data_tests:
+          - not_null
