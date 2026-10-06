@@ -1,0 +1,57 @@
+version: 2
+
+models:
+  - name: int_product_reviews
+    description: Product review data enriched with product, customer location, price, and freight information.
+
+    columns:
+      - name: review_id
+        description: Unique identifier for the customer review.
+        data_tests:
+          - not_null
+
+      - name: order_id
+        description: The order associated with the review.
+        data_tests:
+          - not_null
+          - relationships:
+              arguments:
+                to: ref('stg_orders')
+                field: order_id
+
+      - name: product_id
+        description: The product associated with the reviewed order.
+        data_tests:
+          - not_null
+          - relationships:
+              arguments:
+                to: ref('stg_products')
+                field: product_id
+
+      - name: product_category_name
+        description: The category of the reviewed product.
+
+      - name: customer_city
+        description: City where the customer who submitted the review is located.
+        data_tests:
+          - not_null
+
+      - name: customer_state
+        description: Brazilian state where the customer who submitted the review is located.
+        data_tests:
+          - not_null
+
+      - name: review_score
+        description: Customer rating for the order, from 1 to 5.
+        data_tests:
+          - not_null
+
+      - name: price
+        description: Price of the reviewed product.
+        data_tests:
+          - not_null
+
+      - name: freight_value
+        description: Freight cost associated with the reviewed product.
+        data_tests:
+          - not_null

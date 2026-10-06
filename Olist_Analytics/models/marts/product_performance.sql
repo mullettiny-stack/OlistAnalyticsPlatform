@@ -6,8 +6,8 @@ with products as (
 )
 
 select
-    product_id,
     product_category_name,
+    product_category_name_english,
     count(distinct order_id) as order_count,
     sum(price) as total_sales,
     sum(freight_value) as total_freight
@@ -15,7 +15,9 @@ select
 from products
 
 group by
-    product_id,
-    product_category_name
+    product_category_name,
+    product_category_name_english
+
 
 order by order_count desc
+

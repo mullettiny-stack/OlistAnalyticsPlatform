@@ -14,6 +14,9 @@ models:
       - name: product_category_name
         description: The category of the product.
 
+      - name: product_category_name_translation
+        description: The translation of the spanish product name 
+
       - name: order_count
         description: Number of distinct orders containing the product.
         data_tests:

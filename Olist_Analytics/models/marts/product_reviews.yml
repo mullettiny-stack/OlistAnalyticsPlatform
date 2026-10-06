@@ -1,0 +1,49 @@
+version: 2
+
+models:
+  - name: product_reviews
+    description: Product review performance by product and customer location, including review scores and freight values.
+
+    columns:
+      - name: product_id
+        description: Identifier of the product.
+        data_tests:
+          - not_null
+
+      - name: product_category_name
+        description: Category of the product.
+
+      - name: customer_city
+        description: City where the customer is located.
+        data_tests:
+          - not_null
+
+      - name: customer_state
+        description: Brazilian state where the customer is located.
+        data_tests:
+          - not_null
+
+      - name: average_review_score
+        description: Average customer review score for the product in the specified location.
+        data_tests:
+          - not_null
+
+      - name: review_count
+        description: Number of reviews associated with the product in the specified location.
+        data_tests:
+          - not_null
+
+      - name: total_product_value
+        description: Total value of the product across the reviewed orders.
+        data_tests:
+          - not_null
+
+      - name: total_freight_value
+        description: Total freight value associated with the product in the specified location.
+        data_tests:
+          - not_null
+
+      - name: average_freight_value
+        description: Average freight value associated with the product in the specified location.
+        data_tests:
+          - not_null
