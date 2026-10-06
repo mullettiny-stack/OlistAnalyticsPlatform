@@ -39,7 +39,7 @@ Additional analysis is also supported around product reviews, customer locations
 
 ## DATA ARCHITECTURE 
 
-![Data Pipeline Architecture](OlistArchitecture.png)
+![Data Pipeline Architecture](images/OlistArchitecture.png)
 
 # 🧩 The Data Problem: Data Silos
 
