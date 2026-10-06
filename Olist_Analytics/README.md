@@ -231,7 +231,7 @@ Snowflake provides the centralized environment where these relationships can be 
 
 ---
 
-# 4. dbt — Transformation Layer
+# 4. dbt: Transformation Layer
 
 dbt was used to transform the raw Snowflake data into structured, analytics-ready models.
 
